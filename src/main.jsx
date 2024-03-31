@@ -26,6 +26,8 @@ import "./index.css";
 import Login from "./components/Login.jsx";
 import AuthProvider from "./utils/AuthContext.jsx";
 import NonProtected from "./routes/NonProtected.jsx";
+import HocWIthLoaiding from "./hoc/HocWIthLoaiding.jsx";
+
 const AuthLayout = () => (
   <AuthProvider>
     <Outlet />
@@ -38,6 +40,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/login", element: <Login /> },
       { path: "/non-protected", element: <NonProtected /> },
+      { path: "/hoc", element: <HocWIthLoaiding /> },
 
       {
         element: <ProtectedRoute role="admin" />,

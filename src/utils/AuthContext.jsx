@@ -42,7 +42,7 @@ const AuthProvider = ({ children }) => {
       }
     };
 
-    validateToken();
+    // validateToken();
 
     // Cleanup function
     return () => {
